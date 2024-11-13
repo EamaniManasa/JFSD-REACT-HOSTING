@@ -21,7 +21,7 @@ export default function Show()
     }
 
     function saveEdit(){
-        axios.put("http:jfsd-spring-hosting-production-7082.up.railway.app/update",{
+        axios.put("http://jfsd-spring-hosting-production-7082.up.railway.app/update",{
         name:document.getElementsByName("e_name")[0].value,
         role:document.getElementsByName("e_role")[0].value,
         email:document.getElementsByName("e_email")[0].value,
@@ -35,7 +35,7 @@ export default function Show()
 
     const [result, setResult] = useState(null)
     if(result==null){
-        axios.get("http:jfsd-spring-hosting-production-7082.up.railway.app/all", {}).then((res)=>{
+        axios.get("http://jfsd-spring-hosting-production-7082.up.railway.app/all", {}).then((res)=>{
         setResult(res.data)
     })
 }
